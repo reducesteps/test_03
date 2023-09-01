@@ -26,6 +26,33 @@
           "outcome": "Neutral"
         }
       ]
+    },
+    {
+      "id": 3,
+      "name": "Problem C",
+      "solutions": [
+        {
+          "id": 4,
+          "name": "Solution C1",
+          "outcome": "Positive"
+        },
+        {
+          "id": 5,
+          "name": "Solution C2",
+          "outcome": "Negative"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Problem D",
+      "solutions": [
+        {
+          "id": 6,
+          "name": "Solution D1",
+          "outcome": "Neutral"
+        }
+      ]
     }
   ]
 }
