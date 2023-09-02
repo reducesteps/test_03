@@ -1,7 +1,7 @@
 import json
 import argparse
 
-# Function to handle rating of solutions, problems, and outcomes
+# Function to handle rating items
 def rate_items(search_type, query, rating):
     with open('solution_finder.json', 'r') as f:
         data = json.load(f)
@@ -14,8 +14,8 @@ def rate_items(search_type, query, rating):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Rating system for Solution Finder.')
-    parser.add_argument('--search_type', required=True, help='Type of item to rate: problem, solution, or outcome')
-    parser.add_argument('--query', required=True, help='Item to rate')
-    parser.add_argument('--rating', type=int, required=True, help='Rating value')
+    parser.add_argument('--search_type', required=True, help='Type of search: problem, solution, or outcome')
+    parser.add_argument('--query', required=True, help='Query for search')
+    parser.add_argument('--rating', type=int, required=True, help='Rating to be given')
     args = parser.parse_args()
     rate_items(args.search_type, args.query, args.rating)
