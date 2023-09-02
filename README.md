@@ -14,6 +14,21 @@
 2. **Dynamic Addition**: Use our Python script to dynamically add new problems and solutions.
 3. **Outcome Filters**: Want a positive outcome? Or maybe something neutral? Filter solutions based on outcomes.
 
+### Code Examples 📝
+
+#### 1. Searching for Problems to Find Solutions and Outcomes
+```sh
+python3 solution_search.py --search_type 'problem' --query 'Problem A'
+```
+#### 2. Searching for Solutions to Find Problems and Outcomes
+```sh
+python3 solution_search.py --search_type 'solution' --query 'Solution A1'
+```
+#### 3. Searching for Outcomes and Problems to Find Solutions
+```sh
+python3 solution_search.py --search_type 'outcome' --query 'Positive'
+```
+
 ### Get Started Now! 🌟
 
 1. Clone the repository.
