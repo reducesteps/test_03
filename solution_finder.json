@@ -68,6 +68,15 @@
                     "outcome": "Outcome C1"
                 }
             ]
+        },
+        {
+            "name": "Problem D",
+            "solutions": [
+                {
+                    "name": "Solution D1",
+                    "outcome": "Outcome D1"
+                }
+            ]
         }
     ]
 }
