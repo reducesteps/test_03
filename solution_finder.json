@@ -80,6 +80,27 @@
                     "outcome": "Outcome D1"
                 }
             ]
+        },
+        {
+            "name": "Test Problem A",
+            "solutions": [
+                {
+                    "name": "Test Solution A1",
+                    "outcome": "Positive",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Test Problem B",
+            "solutions": [
+                {
+                    "id": 9,
+                    "name": "Test Solution B1",
+                    "outcome": "Neutral"
+                }
+            ]
         }
     ]
 }
