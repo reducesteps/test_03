@@ -9,6 +9,7 @@ def rate_items(item_type, item_name, rating):
         for solution in problem['solutions']:
             if item_name.lower() == solution['name'].lower() and item_type.lower() == 'solution':
                 solution['rating'] = rating
+                print(f'Rated {item_name} with {rating} stars.')
     with open('solution_finder.json', 'w') as f:
         json.dump(data, f, indent=4)
 
