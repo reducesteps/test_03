@@ -7,7 +7,7 @@ def rate_items(search_type, query, rating):
         data = json.load(f)
     for problem in data['problems']:
         for solution in problem['solutions']:
-            if query.lower() in solution[search_type].lower():
+            if query.lower() in str(solution.get(search_type, '')).lower():
                 solution['rating'] = rating
     with open('solution_finder.json', 'w') as f:
         json.dump(data, f, indent=4)
