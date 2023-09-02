@@ -1,9 +1,7 @@
 import json
 import argparse
-from collections import Counter
-from datetime import datetime
 
-# Function to handle analytics and frequency tracking
+# Function to handle analytics tracking
 def analytics_tracking(search_type, query, limit):
     with open('solution_finder.json', 'r') as f:
         data = json.load(f)
@@ -13,16 +11,19 @@ def analytics_tracking(search_type, query, limit):
     for problem in data['problems']:
         for solution in problem['solutions']:
             if query.lower() in str(solution.get(search_type, '')).lower():
-                results.append(solution.get(search_type, ''))
-    analytics_data[search_type] = Counter(analytics_data.get(search_type, {})) + Counter(results)
+                results.append({'problem': problem['name'], 'solution': solution['name'], 'outcome': solution['outcome']})
+                if query.lower() in analytics_data:
+                    analytics_data[query.lower()] += 1
+                else:
+                    analytics_data[query.lower()] = 1
     with open('analytics.json', 'w') as f:
         json.dump(analytics_data, f, indent=4)
-    return sorted(results, key=lambda x: analytics_data[search_type].get(x, 0), reverse=True)[:limit]
+    return results[:limit]
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Analytics tracking for Solution Finder.')
     parser.add_argument('--search_type', required=True, help='Type of search: problem, solution, or outcome')
-    parser.add_argument('--query', required=True, help='Search query')
+    parser.add_argument('--query', required=True, help='Query for search')
     parser.add_argument('--limit', type=int, default=10, help='Limit the number of search results')
     args = parser.parse_args()
     results = analytics_tracking(args.search_type, args.query, args.limit)
