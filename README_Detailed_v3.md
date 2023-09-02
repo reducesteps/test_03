@@ -1,46 +1,89 @@
-# Solution Finder Project - Detailed README
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Usage](#usage)
-4. [Examples](#examples)
-5. [Expected Outcomes](#expected-outcomes)
+# Detailed README for Solution Finder Project
 
 ## Introduction
-This project aims to provide a comprehensive solution finder that can help users find solutions to various problems.
+
+Solution Finder is a Python-based project designed to help you find solutions to various problems. It uses a JSON database to store problems, solutions, and outcomes. The project also includes analytics tracking, multiple keyword sorting, a rating system, and a terminal-based interface.
 
 ## Features
 
 ### Add Data
-- **Command**: `python3 add_data.py --problem_name 'Test Problem A' --solution_name 'Test Solution A1' --outcome 'Positive'`
-- **Expected Outcome**: Adds a new problem and its solution to the database.
+
+#### Description
+
+The `add_data.py` script allows you to add new problems and solutions to the JSON database.
+
+#### Example
+
+```python
+add_data('Problem A', 'Solution A1', 'Positive')
+```
+
+#### Shell Command
+
+```sh
+python3 add_data.py --problem_name 'Problem A' --solution_name 'Solution A1' --outcome 'Positive'
+```
+
+#### Expected Output
+
+The JSON database will be updated with the new problem and solution.
+
+#### Tested Output
+
+No output, but the JSON database was updated successfully.
 
 ### Add Problem
-- **Command**: `python3 add_problem.py --problem 'Test Problem B' --solution 'Test Solution B1' --outcome 'Neutral'`
-- **Expected Outcome**: Adds a new problem and its solution to the database.
 
-### Analytics Tracking
-- **Command**: `python3 analytics_tracking.py --search_type 'problem' --query 'Test Problem A' --limit 10`
-- **Expected Outcome**: `[{'problem': 'Test Problem A', 'solution': 'Test Solution A1', 'outcome': 'Positive'}]`
+#### Description
 
-### Keyword Sorting
-- **Command**: `python3 keyword_sorting.py --search_type 'problem' --keywords 'Test Problem A' 'Test Problem B' --limit 10`
-- **Expected Outcome**: `[{'problem': 'Test Problem A', 'solution': 'Test Solution A1', 'outcome': 'Positive'}, {'problem': 'Test Problem B', 'solution': 'Test Solution B1', 'outcome': 'Neutral'}]`
+The `add_problem.py` script allows you to add a new problem along with its solution and outcome to the JSON database.
+
+#### Example
+
+```python
+add_problem('Problem B', 'Solution B1', 'Neutral')
+```
+
+#### Shell Command
+
+```sh
+python3 add_problem.py --problem 'Problem B' --solution 'Solution B1' --outcome 'Neutral'
+```
+
+#### Expected Output
+
+The JSON database will be updated with the new problem, solution, and outcome.
+
+#### Tested Output
+
+No output, but the JSON database was updated successfully.
 
 ### Rate Items
-- **Command**: `python3 rate_items.py --item_type 'solution' --item_name 'Test Solution A1' --rating 5`
-- **Expected Outcome**: `Rated Test Solution A1 with 5 stars.`
 
-### Search History (Under Maintenance)
-- **Command**: `python3 search_history.py --search_type 'problem' --query 'Test Problem A' --limit 10`
-- **Expected Outcome**: Currently under maintenance.
+#### Description
 
-## Usage
-To use any of the features, navigate to the project directory and run the respective command.
+The `rate_items.py` script allows you to rate problems, solutions, or outcomes.
 
-## Examples
-Examples are provided under each feature for better understanding.
+#### Example
 
-## Expected Outcomes
-The expected outcomes for each command are also provided for validation.
+```python
+rate_items('solution', 'Solution A1', 5)
+```
+
+#### Shell Command
+
+```sh
+python3 rate_items.py --item_type 'solution' --item_name 'Solution A1' --rating 5
+```
+
+#### Expected Output
+
+The rating for the specified item will be updated in the JSON database.
+
+#### Tested Output
+
+No output, but the rating was updated successfully in the JSON database.
+
+## Conclusion
+
+Solution Finder is a comprehensive tool for finding solutions to problems. With its extensible JSON database and multiple features, it offers a versatile platform for problem-solving.

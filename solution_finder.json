@@ -123,6 +123,26 @@
                     "outcome": "Neutral"
                 }
             ]
+        },
+        {
+            "name": "Test Problem A",
+            "solutions": [
+                {
+                    "name": "Test Solution A1",
+                    "outcome": "Positive"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Test Problem B",
+            "solutions": [
+                {
+                    "id": 13,
+                    "name": "Test Solution B1",
+                    "outcome": "Neutral"
+                }
+            ]
         }
     ]
 }
