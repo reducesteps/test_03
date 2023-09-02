@@ -18,15 +18,15 @@
 
 #### 1. Searching for Problems to Find Solutions and Outcomes
 ```sh
-python3 solution_search.py --search_type 'problem' --query 'Problem A'
+python3 solution_search.py --search_type 'problem' --query 'Problem A' --limit 5
 ```
 #### 2. Searching for Solutions to Find Problems and Outcomes
 ```sh
-python3 solution_search.py --search_type 'solution' --query 'Solution A1'
+python3 solution_search.py --search_type 'solution' --query 'Solution A1' --limit 3
 ```
 #### 3. Searching for Outcomes and Problems to Find Solutions
 ```sh
-python3 solution_search.py --search_type 'outcome' --query 'Positive'
+python3 solution_search.py --search_type 'outcome' --query 'Positive' --limit 2
 ```
 
 ### Get Started Now! 🌟
