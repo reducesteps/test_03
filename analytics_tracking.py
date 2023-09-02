@@ -10,7 +10,7 @@ def analytics_tracking(search_type, query, limit):
     results = []
     for problem in data['problems']:
         for solution in problem['solutions']:
-            if query.lower() in str(solution.get(search_type, '')).lower():
+            if query.lower() in str(problem.get('name', '')).lower():
                 results.append({'problem': problem['name'], 'solution': solution['name'], 'outcome': solution['outcome']})
                 if query.lower() in analytics_data:
                     analytics_data[query.lower()] += 1
