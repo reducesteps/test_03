@@ -59,6 +59,15 @@
                     "outcome": "Positive"
                 }
             ]
+        },
+        {
+            "name": "Problem C",
+            "solutions": [
+                {
+                    "name": "Solution C1",
+                    "outcome": "Outcome C1"
+                }
+            ]
         }
     ]
 }
