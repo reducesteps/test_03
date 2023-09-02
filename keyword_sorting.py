@@ -9,7 +9,7 @@ def keyword_sorting(search_type, keywords, limit):
     results = []
     for problem in data['problems']:
         for solution in problem['solutions']:
-            if all(keyword.lower() in solution[search_type].lower() for keyword in keywords):
+            if all(keyword.lower() in str(solution.get(search_type, '')).lower() for keyword in keywords):
                 results.append({'problem': problem['name'], 'solution': solution['name'], 'outcome': solution['outcome']})
     sorted_results = sorted(results, key=itemgetter('problem', 'solution'))
     return sorted_results[:limit]
