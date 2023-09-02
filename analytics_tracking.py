@@ -1,6 +1,7 @@
 import json
 import argparse
 from collections import Counter
+from datetime import datetime
 
 # Function to handle analytics and frequency tracking
 def analytics_tracking(search_type, query, limit):
@@ -11,8 +12,8 @@ def analytics_tracking(search_type, query, limit):
     results = []
     for problem in data['problems']:
         for solution in problem['solutions']:
-            if query.lower() in solution[search_type].lower():
-                results.append(solution[search_type])
+            if query.lower() in str(solution.get(search_type, '')).lower():
+                results.append(solution.get(search_type, ''))
     analytics_data[search_type] = Counter(analytics_data.get(search_type, {})) + Counter(results)
     with open('analytics.json', 'w') as f:
         json.dump(analytics_data, f, indent=4)
