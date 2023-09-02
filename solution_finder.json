@@ -7,7 +7,8 @@
                 {
                     "id": 1,
                     "name": "Solution A1",
-                    "outcome": "Positive"
+                    "outcome": "Positive",
+                    "rating": 5
                 },
                 {
                     "id": 2,
@@ -98,6 +99,27 @@
                 {
                     "id": 9,
                     "name": "Test Solution B1",
+                    "outcome": "Neutral"
+                }
+            ]
+        },
+        {
+            "name": "Problem A",
+            "solutions": [
+                {
+                    "name": "Solution A1",
+                    "outcome": "Positive",
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Problem B",
+            "solutions": [
+                {
+                    "id": 11,
+                    "name": "Solution B1",
                     "outcome": "Neutral"
                 }
             ]
